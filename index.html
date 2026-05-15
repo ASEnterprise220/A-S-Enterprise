@@ -74,10 +74,9 @@
             text-shadow: 0 0 10px rgba(197, 160, 89, 0.6);
         }
 
-        /* Widescreen Blockbuster Hero Section */
+        /* Widescreen Blockbuster Animated Hero Section */
         .hero {
-            background: linear-gradient(rgba(3, 7, 13, 0.4), rgba(3, 7, 13, 0.95)), 
-                        url('https://unsplash.com') no-repeat center center/cover;
+            position: relative;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -85,6 +84,53 @@
             align-items: center;
             text-align: center;
             padding: 0 20px;
+            overflow: hidden;
+        }
+
+        /* Smooth Cinematic Image Slider Animation */
+        .hero-bg-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+            animation: cinematicSlider 24s infinite ease-in-out;
+        }
+
+        /* Dark Smoke Movie Overlay filter */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(3, 7, 13, 0.4), rgba(3, 7, 13, 0.95));
+            z-index: -1;
+        }
+
+        /* Animation timeline for transitioning background images */
+        @keyframes cinematicSlider {
+            0%, 20% {
+                background-image: url('https://unsplash.com'); /* Naval Ship */
+                transform: scale(1);
+            }
+            25%, 45% {
+                background-image: url('https://unsplash.com'); /* Submarine Casing */
+                transform: scale(1.05);
+            }
+            50%, 70% {
+                background-image: url('https://unsplash.com'); /* Fighter Jet */
+                transform: scale(1);
+            }
+            75%, 95% {
+                background-image: url('https://unsplash.com'); /* Air Defence System Base */
+                transform: scale(1.05);
+            }
+            100% {
+                background-image: url('https://unsplash.com');
+                transform: scale(1);
+            }
         }
 
         .hero h1 {
@@ -518,8 +564,9 @@
         </ul>
     </nav>
 
-    <!-- Widescreen Cinematic Hero Panel -->
+    <!-- Widescreen Animated Cinematic Hero Panel -->
     <div id="home" class="hero">
+        <div class="hero-bg-slider"></div>
         <h1>A S Enterprise</h1>
         <p>Fourteen Years of Strategic Logistics Excellence. Sourcing Industrial Propulsion Systems, Tactical Assets, System Infrastructures, and Heavy Consumables for Sea, Air, and Land Defense Dimensions.</p>
         <div class="badge">Enlisted Contractor: DGDP & NSSD Dhaka</div>
@@ -556,7 +603,7 @@
         </div>
     </section>
 
-    <!-- Force Portfolio Cards (Cinematic Movie Poster Look) -->
+    <!-- Force Portfolio Cards -->
     <section id="capabilities" style="background-color: #060b13;">
         <h2 class="section-title">Theater Logistics Capability</h2>
         <div class="services-grid">
