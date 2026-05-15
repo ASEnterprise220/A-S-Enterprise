@@ -3,708 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A S Enterprise | Tactical Defense Logistics & Sourcing</title>
+    <title>A S Enterprise | Global Defense Procurement Framework</title>
+    <!-- Tailwind CSS Engine - Loaded Free Globally -->
+    <script src="https://tailwindcss.com"></script>
+    <!-- Premium Remix Icons - Loaded Free Globally -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <!-- Google Fonts for Cinematic Military Look -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        /* Cinematic Dark Theater Aesthetic & Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Cinzel', 'Times New Roman', serif, sans-serif;
-            letter-spacing: 1px;
+        /* Smooth Cinematic Crossfade Engine */
+        @keyframes movieSlider {
+            0%, 22% { background-image: linear-gradient(rgba(3,7,18,0.5), rgba(3,7,18,0.96)), url('https://unsplash.com'); transform: scale(1); }
+            25%, 47% { background-image: linear-gradient(rgba(3,7,18,0.5), rgba(3,7,18,0.96)), url('https://unsplash.com'); transform: scale(1.03); }
+            50%, 72% { background-image: linear-gradient(rgba(3,7,18,0.5), rgba(3,7,18,0.96)), url('https://unsplash.com'); transform: scale(1); }
+            75%, 97% { background-image: linear-gradient(rgba(3,7,18,0.5), rgba(3,7,18,0.96)), url('https://unsplash.com'); transform: scale(1.03); }
         }
-
-        body {
-            background-color: #03070d;
-            color: #e2e8f0;
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-
-        /* Fixed Ultra-Thin Tactical Navigation Bar */
-        nav {
-            background: rgba(3, 7, 13, 0.92);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(197, 160, 89, 0.25);
-            padding: 18px 6%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo {
-            color: #ffffff;
-            font-size: 22px;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 0 0 10px rgba(255,255,255,0.1);
-        }
-
-        .logo span {
-            color: #c5a059;
-            text-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 35px;
-        }
-
-        nav ul li a {
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: all 0.4s ease;
-        }
-
-        nav ul li a:hover {
-            color: #c5a059;
-            text-shadow: 0 0 10px rgba(197, 160, 89, 0.6);
-        }
-
-        /* Widescreen Blockbuster Animated Hero Section */
-        .hero {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-            overflow: hidden;
-        }
-
-        /* Smooth Cinematic Image Slider Animation Engine */
-        .hero-bg-slider {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            z-index: -2;
-            animation: cinematicSlider 20s infinite ease-in-out;
-        }
-
-        /* Dark Smoke Movie Overlay Filter */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(rgba(3, 7, 13, 0.45), rgba(3, 7, 13, 0.95));
-            z-index: -1;
-        }
-
-        /* Repaired Animation Timeline with High-Resolution Military Assets */
-        @keyframes cinematicSlider {
-            0%, 20% {
-                background-image: url('https://unsplash.com'); /* Navy Warship */
-                transform: scale(1);
-            }
-            25%, 45% {
-                background-image: url('https://unsplash.com'); /* Submarine Platform */
-                transform: scale(1.04);
-            }
-            50%, 70% {
-                background-image: url('https://unsplash.com'); /* Air Force Fighter Jet */
-                transform: scale(1);
-            }
-            75%, 95% {
-                background-image: url('https://unsplash.com'); /* Tactical Air Defence Base */
-                transform: scale(1.04);
-            }
-            100% {
-                background-image: url('https://unsplash.com');
-                transform: scale(1);
-            }
-        }
-
-        .hero h1 {
-            color: #ffffff;
-            font-size: 64px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 6px;
-            font-weight: 900;
-            text-shadow: 0 2px 20px rgba(0,0,0,0.8);
-        }
-
-        .hero p {
-            color: #cbd5e1;
-            font-size: 20px;
-            max-width: 900px;
-            margin-bottom: 40px;
-            font-weight: 300;
-            letter-spacing: 1.5px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.9);
-        }
-
-        .badge {
-            background: linear-gradient(135deg, #c5a059, #9a7b3e);
-            color: #03070d;
-            padding: 14px 35px;
-            font-weight: 800;
-            border-radius: 2px;
-            text-transform: uppercase;
-            font-size: 13px;
-            letter-spacing: 3px;
-            box-shadow: 0 0 25px rgba(197, 160, 89, 0.4);
-        }
-
-        /* Section Layouts */
-        section {
-            padding: 120px 8%;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 34px;
-            color: #ffffff;
-            margin-bottom: 80px;
-            text-transform: uppercase;
-            font-weight: 800;
-            letter-spacing: 4px;
-            text-shadow: 0 0 10px rgba(255,255,255,0.1);
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #c5a059, transparent);
-            margin: 20px auto 0;
-        }
-
-        /* Chronology Timeline System */
-        .timeline {
-            position: relative;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 2px;
-            background: linear-gradient(to bottom, transparent, rgba(197, 160, 89, 0.5), transparent);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -1px;
-        }
-
-        .timeline-container {
-            padding: 20px 50px;
-            position: relative;
-            width: 50%;
-        }
-
-        .timeline-container::after {
-            content: '';
-            position: absolute;
-            width: 12px;
-            height: 12px;
-            right: -6px;
-            background-color: #03070d;
-            border: 2px solid #c5a059;
-            top: 28px;
-            border-radius: 50%;
-            z-index: 1;
-            box-shadow: 0 0 10px #c5a059;
-        }
-
-        .left { left: 0; }
-        .right { left: 50%; }
-        .right::after { left: -6px; }
-
-        .timeline-content {
-            padding: 30px;
-            background: rgba(15, 23, 42, 0.6);
-            border: 1px solid rgba(255,255,255,0.05);
-            position: relative;
-            border-radius: 4px;
-            border-left: 3px solid #c5a059;
-            backdrop-filter: blur(5px);
-        }
-
-        .right .timeline-content {
-            border-left: none;
-            border-right: 3px solid #c5a059;
-        }
-
-        .timeline-content h2 {
-            font-size: 20px;
-            color: #ffffff;
-            margin-bottom: 12px;
-            letter-spacing: 2px;
-        }
-
-        .timeline-content p {
-            font-size: 14px;
-            color: #94a3b8;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        /* Movie-Poster Style Sector Display Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 45px;
-        }
-
-        .force-card {
-            background: #0b1329;
-            border-radius: 4px;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.03);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            position: relative;
-        }
-
-        .force-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to bottom, transparent 40%, #03070d 95%);
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .force-card:hover {
-            transform: scale(1.03);
-            border-color: rgba(197, 160, 89, 0.4);
-            box-shadow: 0 0 30px rgba(197, 160, 89, 0.15);
-        }
-
-        .force-img {
-            height: 320px;
-            width: 100%;
-            object-fit: cover;
-            filter: grayscale(15%) contrast(115%) brightness(85%);
-            transition: all 0.5s ease;
-        }
-
-        .force-card:hover .force-img {
-            filter: grayscale(0%) contrast(120%) brightness(95%);
-        }
-
-        .force-info {
-            padding: 35px;
-            position: relative;
-            z-index: 2;
-            margin-top: -60px;
-        }
-
-        .force-info h3 {
-            font-size: 24px;
-            color: #ffffff;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
-            padding-bottom: 10px;
-        }
-
-        .force-info ul {
-            list-style-type: none;
-            color: #94a3b8;
-            font-size: 14px;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        .force-info ul li {
-            margin-bottom: 12px;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .force-info ul li::before {
-            content: '▲';
-            color: #c5a059;
-            font-size: 9px;
-            position: absolute;
-            left: 0;
-            top: 2px;
-        }
-
-        /* Board Panels */
-        .leadership-bg {
-            background: linear-gradient(rgba(3, 7, 13, 0.95), rgba(3, 7, 13, 0.98)),
-                        url('https://unsplash.com') no-repeat center center/cover;
-            border-top: 1px solid rgba(197, 160, 89, 0.15);
-            border-bottom: 1px solid rgba(197, 160, 89, 0.15);
-        }
-
-        .leadership-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-        }
-
-        .leader-card {
-            background: rgba(15, 23, 42, 0.8);
-            border: 1px solid rgba(197, 160, 89, 0.15);
-            padding: 45px 35px;
-            border-radius: 2px;
-            text-align: center;
-            min-width: 290px;
-            flex: 1;
-            max-width: 340px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-            backdrop-filter: blur(5px);
-        }
-
-        .leader-card h3 {
-            font-size: 22px;
-            color: #ffffff;
-            margin-bottom: 8px;
-            letter-spacing: 1.5px;
-        }
-
-        .leader-card p {
-            color: #c5a059;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 12px;
-            letter-spacing: 2px;
-        }
-
-        /* Command Desk Information Layout Box */
-        .contact-cta-box {
-            background: rgba(15, 23, 42, 0.5);
-            border: 1px solid rgba(197, 160, 89, 0.2);
-            padding: 50px;
-            border-radius: 4px;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.6);
-            backdrop-filter: blur(5px);
-        }
-
-        .contact-cta-box p {
-            font-size: 16px;
-            margin-bottom: 25px;
-            color: #94a3b8;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        .contact-details-grid {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 35px;
-            flex-wrap: wrap;
-        }
-
-        .contact-item h4 {
-            color: #c5a059;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
-        }
-
-        .contact-item p {
-            font-size: 18px;
-            color: #ffffff;
-            font-weight: bold;
-        }
-
-        .contact-btn {
-            display: inline-block;
-            background: transparent;
-            color: #c5a059;
-            text-decoration: none;
-            padding: 14px 40px;
-            font-weight: bold;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-radius: 2px;
-            transition: all 0.4s ease;
-            border: 1px solid #c5a059;
-        }
-
-        .contact-btn:hover {
-            background-color: #c5a059;
-            color: #03070d;
-            box-shadow: 0 0 25px rgba(197, 160, 89, 0.4);
-        }
-
-        /* Epic Dark Cinematic Footer Section Layout */
-        footer {
-            background-color: #020408;
-            color: #ffffff;
-            padding: 100px 8% 40px;
-            border-top: 1px solid rgba(197, 160, 89, 0.2);
-        }
-
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 60px;
-            margin-bottom: 60px;
-        }
-
-        .footer-column h3 {
-            color: #c5a059;
-            font-size: 16px;
-            text-transform: uppercase;
-            margin-bottom: 30px;
-            letter-spacing: 2px;
-        }
-
-        .footer-column p {
-            color: #64748b;
-            margin-bottom: 14px;
-            font-size: 14px;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        .footer-column a {
-            color: #cbd5e1;
-            text-decoration: none;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            padding-top: 30px;
-            font-size: 12px;
-            color: #475569;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* Fixed WhatsApp Floating Integration Core Icon Layout */
-        .whatsapp-float {
-            position: fixed;
-            width: 55px;
-            height: 55px;
-            bottom: 40px;
-            right: 40px;
-            background-color: rgba(37, 211, 102, 0.15);
-            border: 1px solid #25d366;
-            color: #25d366;
-            border-radius: 50%;
-            text-align: center;
-            font-size: 20px;
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-        }
-
-        .whatsapp-float:hover {
-            background-color: #25d366;
-            color: #03070d;
-            box-shadow: 0 0 25px #25d366;
-        }
-
-        @media (max-width: 768px) {
-            .timeline::after { left: 31px; }
-            .timeline-container { width: 100%; padding-left: 70px; padding-right: 25px; }
-            .timeline-container::after { left: 21px; right: auto; }
-            .right { left: 0%; }
-            .right .timeline-content { border-right: none; border-left: 3px solid #c5a059; }
-            .hero h1 { font-size: 36px; letter-spacing: 3px; }
-        }
+        .animate-movie { animation: movieSlider 20s infinite ease-in-out; }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
-<body>
+<body class="bg-[#030712] text-slate-100 font-inter antialiased">
 
-    <!-- Top Navigation Bar Menu -->
-    <nav>
-        <div class="logo">A S <span>ENTERPRISE</span></div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#history">Chronology</a></li>
-            <li><a href="#capabilities">Sectors</a></li>
-            <li><a href="#governance">Command</a></li>
-            <li><a href="#contact">Contact</a></li>
+    <!-- Top Floating Tactical Navbar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-[#030712]/90 backdrop-blur-md border-b border-amber-500/20 px-6 md:px-16 py-4 flex justify-between items-center">
+        <div class="font-cinzel text-xl md:text-2xl font-bold tracking-widest text-white">
+            A S <span class="text-amber-500">ENTERPRISE</span>
+        </div>
+        <ul class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-wider text-slate-400">
+            <li><a href="#home" class="hover:text-amber-500 transition">Home</a></li>
+            <li><a href="#history" class="hover:text-amber-500 transition">Chronology</a></li>
+            <li><a href="#sectors" class="hover:text-amber-500 transition">Sectors</a></li>
+            <li><a href="#command" class="hover:text-amber-500 transition">Command</a></li>
+            <li><a href="#procurement" class="hover:text-amber-500 transition">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Widescreen Animated Cinematic Hero Banner -->
-    <div id="home" class="hero">
-        <div class="hero-bg-slider"></div>
-        <h1>A S Enterprise</h1>
-        <p>Fourteen Years of Strategic Logistics Excellence. Sourcing High-Output Propulsion Systems, Tactical Assets, System Infrastructures, and Consumables for Sea, Air, and Land Defense Networks.</p>
-        <div class="badge">Enlisted Contractor: DGDP & NSSD Dhaka</div>
+    <!-- Animated Cinematic Hero Theater -->
+    <div id="home" class="relative h-screen w-full flex flex-col justify-center items-center text-center px-4 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center transition-all duration-1000 z-0 animate-movie"></div>
+        <div class="relative z-10 max-w-4xl mx-auto space-y-6">
+            <h1 class="font-cinzel text-4xl md:text-7xl font-black uppercase tracking-wider text-white drop-shadow-2xl">
+                A S Enterprise
+            </h1>
+            <p class="text-base md:text-xl text-slate-300 max-w-2xl mx-auto font-light tracking-wide leading-relaxed">
+                Fourteen years of mission-critical defense logistics. Supplying naval propulsion, aviation systems, tactical hardware, and communications components.
+            </p>
+            <div class="pt-4">
+                <span class="inline-block bg-gradient-to-r from-amber-600 to-amber-500 text-slate-950 text-xs font-black uppercase tracking-widest px-6 py-3 rounded-sm shadow-xl shadow-amber-500/10">
+                    Enlisted Strategic Supplier: DGDP & NSSD Dhaka
+                </span>
+            </div>
+        </div>
     </div>
 
-    <!-- 14-Year Operational Chronology Timeline -->
-    <section id="history">
-        <h2 class="section-title">14-Year Operational History</h2>
-        <div class="timeline">
-            <div class="timeline-container left">
-                <div class="timeline-content">
-                    <h2>2012 — Operations Initiate</h2>
-                    <p>A S Enterprise establishes its headquarters in Dhaka, structuring logistical pathways to distribute military equipment elements.</p>
-                </div>
-            </div>
-            <div class="timeline-container right">
-                <div class="timeline-content">
-                    <h2>2015 — Audited Force Enlistment</h2>
-                    <p>Secures procurement clearance certificates and official active enlistment standings under the Directorate General Defence Purchase (DGDP) [^1^] and the Naval Stores Sub Depot (NSSD) Dhaka [^2^].</p>
-                </div>
-            </div>
-            <div class="timeline-container left">
-                <div class="timeline-content">
-                    <h2>2019 — Heavy Material Pipelines</h2>
-                    <p>Scales operations directly into capital machinery contracts, successfully delivering central vessel generators, auxiliary system setups, and propulsion parts.</p>
-                </div>
-            </div>
-            <div class="timeline-container right">
-                <div class="timeline-content">
-                    <h2>2026 — Sub-Surface Engineering Sourcing</h2>
-                    <p>Marking 14 continuous years of delivery good-will. Managing complex technical procurement loops for Aviation platforms and critical Commander Submarine Maintenance wings.</p>
-                </div>
-            </div>
+    <!-- 14-Year Numerical Counter Section (Behoof Framework) -->
+    <div class="bg-[#070f21] border-y border-slate-800 py-12 px-6 md:px-16 grid grid-columns-1 md:grid-cols-4 gap-8 text-center">
+        <div>
+            <div class="text-3xl font-bold text-amber-500 font-cinzel">14</div>
+            <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">Years of Continuity</div>
         </div>
-    </section>
+        <div>
+            <div class="text-3xl font-bold text-white font-cinzel">2012</div>
+            <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">Established Baseline</div>
+        </div>
+        <div>
+            <div class="text-3xl font-bold text-amber-500 font-cinzel">100%</div>
+            <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">Authenticity Audited</div>
+        </div>
+        <div>
+            <div class="text-3xl font-bold text-white font-cinzel">DGDP / NSSD</div>
+            <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">Active Enlistments</div>
+        </div>
+    </div>
 
-    <!-- Capabilities Portfolios Matrix -->
-    <section id="capabilities" style="background-color: #060b13;">
-        <h2 class="section-title">Theater Logistics Capability</h2>
-        <div class="services-grid">
+    <!-- Timeline History Section -->
+    <section id="history" class="py-24 px-6 md:px-16 max-w-6xl mx-auto">
+        <h2 class="font-cinzel text-3xl font-bold text-center tracking-widest mb-16 uppercase text-white">
+            14-Year Chronicle
+        </h2>
+        <div class="space-y-8 relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-amber-500/30 before:to-transparent">
             
-            <!-- Navy Card Layout -->
-            <div class="force-card">
-                <img class="force-img" src="https://unsplash.com" alt="Naval Destroyer Operations">
-                <div class="force-info">
-                    <h3>Naval & Maritime Support</h3>
-                    <ul>
-                        <li>Submarine Propulsion Engines & Loop Spares</li>
-                        <li>Main Vessel High-Output Generators</li>
-                        <li>Tactical Speedboat Patrol Engines</li>
-                        <li>Pneumatic Engine Air Starter Motors</li>
-                        <li>Hull and Ship Structural Component Packs</li>
-                    </ul>
+            <div class="relative flex flex-col md:flex-row items-start md:justify-between">
+                <div class="md:w-5/12 pl-12 md:pl-0 md:text-right">
+                    <div class="bg-[#0b1329] p-6 rounded border border-slate-800 border-l-4 border-l-amber-500 shadow-xl">
+                        <span class="text-xs font-bold text-amber-500 font-cinzel uppercase">2012 — Inception</span>
+                        <p class="text-sm text-slate-400 mt-2">A S Enterprise establishes operational headquarters in Dhaka to serve the specialized logistics market.</p>
+                    </div>
+                </div>
+                <div class="absolute left-3.5 md:left-1/2 w-3 h-3 bg-amber-500 rounded-full transform -translate-x-1/2 mt-6 shadow-[0_0_10px_#f59e0b]"></div>
+                <div class="hidden md:block md:w-5/12"></div>
+            </div>
+
+            <div class="relative flex flex-col md:flex-row items-start md:justify-between">
+                <div class="hidden md:block md:w-5/12"></div>
+                <div class="absolute left-3.5 md:left-1/2 w-3 h-3 bg-amber-500 rounded-full transform -translate-x-1/2 mt-6 shadow-[0_0_10px_#f59e0b]"></div>
+                <div class="md:w-5/12 pl-12 md:pl-0">
+                    <div class="bg-[#0b1329] p-6 rounded border border-slate-800 border-r-4 border-r-amber-500 shadow-xl">
+                        <span class="text-xs font-bold text-amber-500 font-cinzel uppercase">2015 — Security Clearance</span>
+                        <p class="text-sm text-slate-400 mt-2">Secures institutional enlistment with the Directorate General Defence Purchase (DGDP) [^1^] and Naval Stores Sub Depot (NSSD) [^2^].</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Army Card Layout -->
-            <div class="force-card">
-                <img class="force-img" src="https://unsplash.com" alt="Tactical Vehicle Transport">
-                <div class="force-info">
-                    <h3>Land Force Materials</h3>
-                    <ul>
-                        <li>Motor Transport (MT) Tactical Spares</li>
-                        <li>Heavy Combat Armored Vehicle Systems</li>
-                        <li>Military-Specification Caliber Ammunition</li>
-                        <li>Integrated Command-Level CCTV Arrays</li>
-                        <li>Base Depot Engineering Machinery Units</li>
-                    </ul>
+            <div class="relative flex flex-col md:flex-row items-start md:justify-between">
+                <div class="md:w-5/12 pl-12 md:pl-0 md:text-right">
+                    <div class="bg-[#0b1329] p-6 rounded border border-slate-800 border-l-4 border-l-amber-500 shadow-xl">
+                        <span class="text-xs font-bold text-amber-500 font-cinzel uppercase">2019 — Heavy Systems Sourcing</span>
+                        <p class="text-sm text-slate-400 mt-2">Expands direct pipelines into capital machinery supply including submarine propulsion elements and generators.</p>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Air Force Card Layout -->
-            <div class="force-card">
-                <img class="force-img" src="https://unsplash.com" alt="Supersonic Jet Operations">
-                <div class="force-info">
-                    <h3>Aerospace & Command Intel</h3>
-                    <ul>
-                        <li>Aerospace Platform Aviation Consumables</li>
-                        <li>Airframe Structural Parts & Spares</li>
-                        <li>High-Stated Aviation Special Fluids</li>
-                        <li>Secure Tactical Intercom PABX Networks</li>
-                        <li>Cryptographic Base Security Systems</li>
-                    </ul>
-                </div>
+                <div class="absolute left-3.5 md:left-1/2 w-3 h-3 bg-amber-500 rounded-full transform -translate-x-1/2 mt-6 shadow-[0_0_10px_#f59e0b]"></div>
+                <div class="hidden md:block md:w-5/12"></div>
             </div>
 
         </div>
     </section>
 
-    <!-- Management Profiles -->
-    <section id="governance" class="leadership-bg">
-        <h2 class="section-title">Corporate Command Group</h2>
-        <div class="leadership-container">
-            <div class="leader-card">
-                <h3>Mr. Atower Rahman</h3>
-                <p>Honorable Chairman</p>
-            </div>
-            <div class="leader-card">
-                <h3>Sultana Rahman</h3>
-                <p>Proprietor</p>
-            </div>
-            <div class="leader-card">
-                <h3>Mr. Humayun Rahman</h3>
-                <p>Managing Director</p>
+    <!-- Sector Capabilities Section -->
+    <section id="sectors" class="bg-[#050b18] py-24 px-6 md:px-16 border-y border-slate-900">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-cinzel text-3xl font-bold text-center tracking-widest mb-16 uppercase text-white">
+                Theater Logistics Capabilities
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Navy Block -->
+                <div class="bg-[#0b1329] border border-slate-800/60 rounded-sm overflow-hidden group hover:border-amber-500/30 transition duration-300">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://unsplash.com" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" alt="Naval">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0b1329] to-transparent"></div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h3 class="font-cinzel text-lg font-bold text-white tracking-wider flex items-center"><i class="ri-anchor-line mr-2 text-amber-500"></i> Maritime Force</h3>
+                        <ul class="text-xs text-slate-400 space-y-2 font-light">
+                            <li>• Submarine Propulsion Assembly Loop Parts</li>
+                            <li>• High-Output Industrial Marine Generators</li>
+                            <li>• Tactical Speedboat Patrol Propulsion Units</li>
+                            <li>• Heavy Pneumatic Air Starter Motors</li>
+                            <li>• Certified Hull and Vessel Spare Elements</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Army Block -->
+                <div class="bg-[#0b1329] border border-slate-800/60 rounded-sm overflow-hidden group hover:border-amber-500/30 transition duration-300">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://unsplash.com" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" alt="Army">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0b1329] to-transparent"></div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h3 class="font-cinzel text-lg font-bold text-white tracking-wider flex items-center"><i class="ri-shield-cross-line mr-2 text-amber-500"></i> Land Operations</h3>
+                        <ul class="text-xs text-slate-400 space-y-2 font-light">
+                            <li>• Motor Transport (MT) Tactical Spares</li>
+                            <li>• Heavy Armored Vehicle Components</li>
+                            <li>• Military-Specification Mission Ammunition</li>
+                            <li>• Integrated Command Depot CCTV Systems</li>
+                            <li>• Base Infrastructure Maintenance Plants</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Air Force Block -->
+                <div class="bg-[#0b1329] border border-slate-800/60 rounded-sm overflow-hidden group hover:border-amber-500/30 transition duration-300">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://unsplash.com" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" alt="Aviation">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0b1329] to-transparent"></div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h3 class="font-cinzel text-lg font-bold text-white tracking-wider flex items-center"><i class="ri-plane-line mr-2 text-amber-500"></i> Aerospace Wings</h3>
+                        <ul class="text-xs text-slate-400 space-y-2 font-light">
+                            <li>• Aerospace Structural Platform Components</li>
+                            <li>• Technical Airframe Consumable Batches</li>
+                            <li>• High-State `MIL-SPEC` Tactical Special Fluids</li>
+                            <li>• Secure Multi-Node Base PABX Networks</li>
+                            <li>• Complete Cryptographic Surveillance Units</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Secure Procurement Action Card Panel -->
-    <section id="contact" style="background-color: #03070d;">
-        <h2 class="section-title">Procurement Command Desk</h2>
-        <div class="contact-cta-box">
-            <p>For official tender submissions, manufacturer certificate verification, or defense hardware sourcing coordination, connect through our active command lines below.</p>
-            
-            <div class="contact-details-grid">
-                <div class="contact-item">
-                    <h4>Direct Tactical Hotline</h4>
-                    <p>+8801676454419</p>
-                </div>
-                <div class="contact-item">
-                    <h4>Secure Communication Desk</h4>
-                    <p>asenterprise220@gmail.com</p>
-                </div>
+    <!-- Corporate Governance Section -->
+    <section id="command" class="py-24 px-6 md:px-16 max-w-5xl mx-auto">
+        <h2 class="font-cinzel text-3xl font-bold text-center tracking-widest mb-16 uppercase text-white">
+            Corporate Governance
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-[#0b1329] border border-slate-800 p-8 rounded text-center shadow-lg">
+                <div class="text-sm font-bold text-white tracking-wider">Mr. Atower Rahman</div>
+                <div class="text-[10px] uppercase font-bold text-amber-500 tracking-widest mt-1">Honorable Chairman</div>
             </div>
-
-            <a href="mailto:asenterprise220@gmail.com" class="contact-btn">Initialize Secure Sourcing Exchange</a>
+            <div class="bg-[#0b1329] border border-slate-800 p-8 rounded text-center shadow-lg">
+                <div class="text-sm font-bold text-white tracking-wider">Sultana Rahman</div>
+                <div class="text-[10px] uppercase font-bold text-amber-500 tracking-widest mt-1">Proprietor</div>
+            </div>
+            <div class="bg-[#0b1329] border border-slate-800 p-8 rounded text-center shadow-lg">
+                <div class="text-sm font-bold text-white tracking-wider">Mr. Humayun Rahman</div>
+                <div class="text-[10px] uppercase font-bold text-amber-500 tracking-widest mt-1">Managing Director</div>
+            </div>
         </div>
     </section>
 
-    <!-- Footnotes Layout -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>A S Enterprise</h3>
-                <p>Operating as a registered tactical logistics provider inside the Bangladesh defense infrastructure network since 2012.</p>
-                <p>Total component authenticity and strict military security compliance guaranteed.</p>
+    <!-- Secure Sourcing Action Console -->
+    <section id="procurement" class="bg-[#02050a] py-24 px-6 md:px-16 border-t border-slate-900">
+        <div class="max-w-4xl mx-auto bg-[#0b1329] border border-slate-800/80 p-8 md:p-12 rounded-sm text-center space-y-6 shadow-2xl relative">
+            <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-amber-500"></div>
+            <h3 class="font-cinzel text-2xl font-bold tracking-widest text-white uppercase">Procurement Command Desk</h3>
+            <p class="text-sm text-slate-400 font-light max-w-xl mx-auto">
+                Connect instantly with our managing engineering desk to initiate official defense tender submissions, quality tracking, or OEM licensing allocation profiles.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 text-left max-w-lg mx-auto">
+                <div class="bg-[#030712] p-4 border border-slate-800/50 rounded flex items-center space-x-3">
+                    <i class="ri-phone-fill text-amber-500 text-xl"></i>
+                    <div>
+                        <div class="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Hotline Interface</div>
+                        <div class="text-sm font-bold text-white">+8801676454419</div>
+                    </div>
+                </div>
+                <div class="bg-[#030712] p-4 border border-slate-800/50 rounded flex items-center space-x-3">
+                    <i class="ri-mail-fill text-amber-500 text-xl"></i>
+                    <div>
+                        <div class="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Secure Sourcing Inbox</div>
+                        <div class="text-sm font-bold text-white">asenterprise220@gmail.com</div>
+                    </div>
+                </div>
             </div>
-            <div class="footer-column">
-                <h3>Institutional Mandates</h3>
-                <p>• Directorate General Defence Purchase (DGDP) [^1^]</p>
-                <p>• Naval Stores Sub Depot (NSSD) Dhaka [^2^]</p>
-                <p>• Naval Headquarters (Technical Procurement Branch)</p>
-            </div>
-            <div class="footer-column">
-                <h3>Secure Channels</h3>
-                <p><strong>Secure Inbox:</strong> <a href="mailto:asenterprise220@gmail.com">asenterprise220@gmail.com</a></p>
-                <p><strong>Mobile / Secure WhatsApp:</strong> <a href="https://wa.me">+8801676454419</a></p>
-                <p><strong>Operational Center:</strong> Dhaka, Bangladesh</p>
+            <div class="pt-6">
+                <a href="mailto:asenterprise220@gmail.com" class="inline-block border border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-slate-950 font-bold text-xs uppercase tracking-widest px-8 py-4 transition rounded-sm shadow-lg">
+                    Initialize Secure Sourcing Exchange
+                </a>
             </div>
         </div>
-        <div class="footer-bottom">
-            &copy; 2026 A S Enterprise. All Rights Reserved. | Defense Logistics Infrastructure Framework.
+    </section>
+
+    <!-- Footer System Matrix -->
+    <footer class="bg-[#010307] text-slate-500 text-xs py-16 px-6 md:px-16 border-t border-slate-900/60">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <div class="space-y-4">
+                <h4 class="font-cinzel text-sm text-amber-500 font-bold uppercase tracking-wider">A S Enterprise</h4>
+                <p class="font-light leading-relaxed text-slate-400">Registered logistics interface serving the specialized defense infrastructure network of Bangladesh since 2012.</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="font-cinzel text-sm text-white font-bold uppercase tracking-wider">Mandates & Rules</h4>
+                <ul class="space-y-2 text-slate-400 font-light">
+                    <li>• Directorate General Defence Purchase (DGDP) [^1^]</li>
+                    <li>• Naval Stores Sub Depot (NSSD) Dhaka [^2^]</li>
+                    <li>• Naval Headquarters (Technical Stores Branch)</li>
+                </ul>
+            </div>
+            <div class="space-y-4">
+                <h4 class="font-cinzel text-sm text-white font-bold uppercase tracking-wider">Verified Links</h4>
+                <p class="font-light text-slate-400"><strong>Secure Desk:</strong> asenterprise220@gmail.com</p>
+                <p class="font-light text-slate-400"><strong>Direct Mobile Interface:</strong> +8801676454419</p>
+                <p class="font-light text-slate-400"><strong>Base Grid:</strong> Dhaka, Bangladesh</p>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto pt-8 border-t border-slate-900 text-center tracking-widest font-light text-[10px] uppercase text-slate-600">
+            &copy; 2026 A S Enterprise. All Rights Reserved. | Defense Infrastructure Framework Logistics Support.
         </div>
     </footer>
 
-    <!-- Floating Communications Trigger Anchor -->
-    <a href="https://wa.me" class="whatsapp-float" target="_blank">
-        📞
+    <!-- Instant One-Touch WhatsApp Connection Beacon -->
+    <a href="https://wa.me" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-emerald-500/10 border border-emerald-500 backdrop-blur-md rounded-full flex items-center justify-center text-emerald-500 text-2xl hover:bg-emerald-500 hover:text-slate-950 transition duration-300 shadow-2xl z-50 shadow-emerald-500/20">
+        <i class="ri-whatsapp-line"></i>
     </a>
 
 </body>
