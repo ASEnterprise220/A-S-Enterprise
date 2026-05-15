@@ -3,284 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A S Enterprise | Global Defense Procurement Framework</title>
-    <!-- Tailwind CSS Engine - Loaded Free Globally -->
+    <title>SaaS Graphic Design Studio Engine | AI Generation Upgrade</title>
+    <!-- Tailwind CSS for Interface Layout -->
     <script src="https://tailwindcss.com"></script>
-    <!-- Premium Remix Icons - Loaded Free Globally -->
-    <link href="https://jsdelivr.net" rel="stylesheet">
-    <!-- Google Fonts for Cinematic Military Look -->
-    <link href="https://googleapis.com" rel="stylesheet">
+    <!-- Fabric.js Vector Canvas Engine Sourced Safely -->
+    <script src="https://cloudflare.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col font-sans">
+
+    <!-- Top Studio Controlling Nav Panel -->
+    <header class="bg-slate-950 border-b border-slate-800 px-6 py-4 flex justify-between items-center">
+        <h1 class="text-lg font-bold tracking-wider text-amber-500">CLOUD-DESIGN <span class="text-white text-xs font-mono ml-2">v1.1 AI Engine</span></h1>
+        <div class="flex space-x-3">
+            <button onclick="exportCanvasJSON()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold px-4 py-2 rounded transition">
+                Export Database JSON
+            </button>
+            <button onclick="downloadPNG()" class="bg-amber-500 hover:bg-amber-600 text-slate-950 text-xs font-black px-4 py-2 rounded transition">
+                Download PNG
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Workspace Configuration Screen -->
+    <div class="flex flex-1 overflow-hidden">
+        
+        <!-- Left Side Tool Assembly Rack -->
+        <aside class="w-72 bg-slate-950 border-r border-slate-800 p-4 space-y-6 flex flex-col justify-start overflow-y-auto">
+            
+            <!-- Standard Vectors Group -->
+            <div>
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Workspace Controls</div>
+                <div class="space-y-2">
+                    <button onclick="addTextBox()" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs text-left px-4 py-3 rounded flex items-center transition">
+                        <span class="mr-3 font-mono font-bold text-amber-500">T</span> Add Text Element
+                    </button>
+                    <button onclick="addRectangle()" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs text-left px-4 py-3 rounded flex items-center transition">
+                        <span class="mr-3 font-mono font-bold text-amber-500">■</span> Add Base Rectangle
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Generative AI Generator Engine Box Layout -->
+            <div class="border-t border-slate-800 pt-4">
+                <div class="text-xs font-bold text-amber-500 uppercase tracking-wider mb-2">✨ AI Text-To-Image Lab</div>
+                <div class="space-y-3">
+                    <textarea id="aiPrompt" rows="3" placeholder="Describe your asset scene (e.g., 'Modern naval ship firing radar guided missiles, cinematic dramatic lighting, digital art style')..." class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-xs text-slate-200 focus:outline-none focus:border-amber-500 resize-none"></textarea>
+                    
+                    <button id="generateBtn" onclick="generateAIAsset()" class="w-full bg-gradient-to-r from-amber-600 to-amber-500 text-slate-950 text-xs font-black py-2.5 rounded hover:from-amber-500 hover:to-amber-400 transition flex justify-center items-center">
+                        <span id="btnText">Generate Vector Asset</span>
+                        <span id="btnSpinner" class="hidden animate-spin rounded-full h-4 w-4 border-2 border-slate-950 border-t-transparent ml-2"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-4">
+                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Upload Asset</label>
+                <input type="file" id="imageLoader" class="w-full text-xs text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-slate-800 file:text-slate-200 hover:file:bg-slate-700 cursor-pointer"/>
+            </div>
+
+            <div class="border-t border-slate-800 pt-4 flex-1 flex flex-col justify-end">
+                <button onclick="clearCanvas()" class="w-full bg-red-950/40 hover:bg-red-900/60 border border-red-800 text-red-200 text-xs font-bold py-2.5 rounded transition">
+                    Clear Canvas Grid
+                </button>
+            </div>
+        </aside>
+
+        <!-- Central Sandbox Engineering Canvas Area -->
+        <main class="flex-1 flex justify-center items-center bg-slate-900 p-8 overflow-auto">
+            <div class="shadow-2xl border-4 border-slate-950 bg-white rounded-sm overflow-hidden">
+                <canvas id="studioCanvas" width="800" height="450"></canvas>
+            </div>
+        </main>
+    </div>
+
+    <!-- Application Initialization Scripts Engine -->
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        cinzel: ['Cinzel', 'serif'],
-                        inter: ['Inter', 'sans-serif'],
-                    }
+        // Mount Interactive Canvas Vector Layer Matrix
+        const canvas = new fabric.Canvas('studioCanvas', {
+            backgroundColor: '#ffffff',
+            preserveObjectStacking: true
+        });
+
+        // Tool Macro: Add Text Dynamic Object Layer Box
+        function addTextBox() {
+            const text = new fabric.IText('Edit This Layer Text', {
+                left: 100,
+                top: 150,
+                fontFamily: 'Helvetica',
+                fill: '#0f172a',
+                fontSize: 32
+            });
+            canvas.add(text);
+            canvas.setActiveObject(text);
+        }
+
+        // Tool Macro: Add Rectangle Primitive Base Object Layer
+        function addRectangle() {
+            const rect = new fabric.Rect({
+                left: 250,
+                top: 120,
+                fill: '#f59e0b',
+                width: 150,
+                height: 100
+            });
+            canvas.add(rect);
+            canvas.setActiveObject(rect);
+        }
+
+        // Deep AI Cloud Sourcing Pipeline Execution Block
+        async function generateAIAsset() {
+            const promptInput = document.getElementById('aiPrompt').value.trim();
+            const generateBtn = document.getElementById('generateBtn');
+            const btnText = document.getElementById('btnText');
+            const btnSpinner = document.getElementById('btnSpinner');
+
+            if (!promptInput) {
+                alert("Please input a text description for your custom AI asset layer matrix execution.");
+                return;
+            }
+
+            // UI Loading state locking
+            generateBtn.disabled = true;
+            btnText.innerText = "Synthesizing Image...";
+            btnSpinner.classList.remove('hidden');
+
+            try {
+                // Post network operation to secure custom cloud server instance running on localhost
+                const response = await fetch('http://localhost:5000/api/generate-ai-image', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ prompt: promptInput })
+                });
+
+                const data = await response.json();
+
+                if (data.image) {
+                    // Inject base64 data stream smoothly into canvas workspace stack array
+                    fabric.Image.fromURL(data.image, function(img) {
+                        img.set({ left: 150, top: 50 });
+                        img.scaleToWidth(400); // Standard sizing bounds
+                        canvas.add(img);
+                        canvas.renderAll();
+                    });
+                } else {
+                    alert("Error: Server processing chain failed to compile base64 image data.");
                 }
+
+            } catch (err) {
+                console.error(err);
+                alert("Could not link to secure local backend microservice. Confirm port 5000 execution state.");
+            } finally {
+                // Restore interactive control configuration layouts
+                generateBtn.disabled = false;
+                btnText.innerText = "Generate Vector Asset";
+                btnSpinner.classList.add('hidden');
+            }
+        }
+
+        // Local asset processing engine pipelines mapping
+        document.getElementById('imageLoader').addEventListener('change', function(e) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                fabric.Image.fromURL(event.target.result, function(img) {
+                    img.set({ left: 200, top: 100 });
+                    img.scaleToWidth(300);
+                    canvas.add(img);
+                    canvas.renderAll();
+                });
+            }
+            reader.readAsDataURL(e.target.files);
+        });
+
+        function exportCanvasJSON() {
+            console.log(JSON.stringify(canvas.toJSON()));
+            alert("Canvas structure compiled to console log matrix successfully.");
+        }
+
+        function downloadPNG() {
+            const dataURL = canvas.toDataURL({ format: 'png', quality: 1.0 });
+            const link = document.createElement('a');
+            link.download = 'ai-studio-layout.png';
+            link.href = dataURL;
+            link.click();
+        }
+
+        function clearCanvas() {
+            if(confirm("Confirm erasure operations for workspace state?")) {
+                canvas.clear();
+                canvas.setBackgroundColor('#ffffff', canvas.renderAll.bind(canvas));
             }
         }
     </script>
-    <style>
-        /* Smooth Cinematic Crossfade Engine */
-        @keyframes movieSlider {
-            0%, 22% { background-image: linear-gradient(rgba(3,7,18,0.5), rgba(3,7,18,0.96)), url('https://unsplash.com'); transform: scale(1); }
-            25%, 47% { background-image: linear-gradient(rgba(3,7,18,0.5), rgba(3,7,18,0.96)), url('https://unsplash.com'); transform: scale(1.03); }
-            50%, 72% { background-image: linear-gradient(rgba(3,7,18,0.5), rgba(3,7,18,0.96)), url('https://unsplash.com'); transform: scale(1); }
-            75%, 97% { background-image: linear-gradient(rgba(3,7,18,0.5), rgba(3,7,18,0.96)), url('https://unsplash.com'); transform: scale(1.03); }
-        }
-        .animate-movie { animation: movieSlider 20s infinite ease-in-out; }
-        html { scroll-behavior: smooth; }
-    </style>
-</head>
-<body class="bg-[#030712] text-slate-100 font-inter antialiased">
-
-    <!-- Top Floating Tactical Navbar -->
-    <nav class="fixed top-0 left-0 w-full z-50 bg-[#030712]/90 backdrop-blur-md border-b border-amber-500/20 px-6 md:px-16 py-4 flex justify-between items-center">
-        <div class="font-cinzel text-xl md:text-2xl font-bold tracking-widest text-white">
-            A S <span class="text-amber-500">ENTERPRISE</span>
-        </div>
-        <ul class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-wider text-slate-400">
-            <li><a href="#home" class="hover:text-amber-500 transition">Home</a></li>
-            <li><a href="#history" class="hover:text-amber-500 transition">Chronology</a></li>
-            <li><a href="#sectors" class="hover:text-amber-500 transition">Sectors</a></li>
-            <li><a href="#command" class="hover:text-amber-500 transition">Command</a></li>
-            <li><a href="#procurement" class="hover:text-amber-500 transition">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Animated Cinematic Hero Theater -->
-    <div id="home" class="relative h-screen w-full flex flex-col justify-center items-center text-center px-4 overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center transition-all duration-1000 z-0 animate-movie"></div>
-        <div class="relative z-10 max-w-4xl mx-auto space-y-6">
-            <h1 class="font-cinzel text-4xl md:text-7xl font-black uppercase tracking-wider text-white drop-shadow-2xl">
-                A S Enterprise
-            </h1>
-            <p class="text-base md:text-xl text-slate-300 max-w-2xl mx-auto font-light tracking-wide leading-relaxed">
-                Fourteen years of mission-critical defense logistics. Supplying naval propulsion, aviation systems, tactical hardware, and communications components.
-            </p>
-            <div class="pt-4">
-                <span class="inline-block bg-gradient-to-r from-amber-600 to-amber-500 text-slate-950 text-xs font-black uppercase tracking-widest px-6 py-3 rounded-sm shadow-xl shadow-amber-500/10">
-                    Enlisted Strategic Supplier: DGDP & NSSD Dhaka
-                </span>
-            </div>
-        </div>
-    </div>
-
-    <!-- 14-Year Numerical Counter Section (Behoof Framework) -->
-    <div class="bg-[#070f21] border-y border-slate-800 py-12 px-6 md:px-16 grid grid-columns-1 md:grid-cols-4 gap-8 text-center">
-        <div>
-            <div class="text-3xl font-bold text-amber-500 font-cinzel">14</div>
-            <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">Years of Continuity</div>
-        </div>
-        <div>
-            <div class="text-3xl font-bold text-white font-cinzel">2012</div>
-            <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">Established Baseline</div>
-        </div>
-        <div>
-            <div class="text-3xl font-bold text-amber-500 font-cinzel">100%</div>
-            <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">Authenticity Audited</div>
-        </div>
-        <div>
-            <div class="text-3xl font-bold text-white font-cinzel">DGDP / NSSD</div>
-            <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">Active Enlistments</div>
-        </div>
-    </div>
-
-    <!-- Timeline History Section -->
-    <section id="history" class="py-24 px-6 md:px-16 max-w-6xl mx-auto">
-        <h2 class="font-cinzel text-3xl font-bold text-center tracking-widest mb-16 uppercase text-white">
-            14-Year Chronicle
-        </h2>
-        <div class="space-y-8 relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-amber-500/30 before:to-transparent">
-            
-            <div class="relative flex flex-col md:flex-row items-start md:justify-between">
-                <div class="md:w-5/12 pl-12 md:pl-0 md:text-right">
-                    <div class="bg-[#0b1329] p-6 rounded border border-slate-800 border-l-4 border-l-amber-500 shadow-xl">
-                        <span class="text-xs font-bold text-amber-500 font-cinzel uppercase">2012 — Inception</span>
-                        <p class="text-sm text-slate-400 mt-2">A S Enterprise establishes operational headquarters in Dhaka to serve the specialized logistics market.</p>
-                    </div>
-                </div>
-                <div class="absolute left-3.5 md:left-1/2 w-3 h-3 bg-amber-500 rounded-full transform -translate-x-1/2 mt-6 shadow-[0_0_10px_#f59e0b]"></div>
-                <div class="hidden md:block md:w-5/12"></div>
-            </div>
-
-            <div class="relative flex flex-col md:flex-row items-start md:justify-between">
-                <div class="hidden md:block md:w-5/12"></div>
-                <div class="absolute left-3.5 md:left-1/2 w-3 h-3 bg-amber-500 rounded-full transform -translate-x-1/2 mt-6 shadow-[0_0_10px_#f59e0b]"></div>
-                <div class="md:w-5/12 pl-12 md:pl-0">
-                    <div class="bg-[#0b1329] p-6 rounded border border-slate-800 border-r-4 border-r-amber-500 shadow-xl">
-                        <span class="text-xs font-bold text-amber-500 font-cinzel uppercase">2015 — Security Clearance</span>
-                        <p class="text-sm text-slate-400 mt-2">Secures institutional enlistment with the Directorate General Defence Purchase (DGDP) [^1^] and Naval Stores Sub Depot (NSSD) [^2^].</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="relative flex flex-col md:flex-row items-start md:justify-between">
-                <div class="md:w-5/12 pl-12 md:pl-0 md:text-right">
-                    <div class="bg-[#0b1329] p-6 rounded border border-slate-800 border-l-4 border-l-amber-500 shadow-xl">
-                        <span class="text-xs font-bold text-amber-500 font-cinzel uppercase">2019 — Heavy Systems Sourcing</span>
-                        <p class="text-sm text-slate-400 mt-2">Expands direct pipelines into capital machinery supply including submarine propulsion elements and generators.</p>
-                    </div>
-                </div>
-                <div class="absolute left-3.5 md:left-1/2 w-3 h-3 bg-amber-500 rounded-full transform -translate-x-1/2 mt-6 shadow-[0_0_10px_#f59e0b]"></div>
-                <div class="hidden md:block md:w-5/12"></div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Sector Capabilities Section -->
-    <section id="sectors" class="bg-[#050b18] py-24 px-6 md:px-16 border-y border-slate-900">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="font-cinzel text-3xl font-bold text-center tracking-widest mb-16 uppercase text-white">
-                Theater Logistics Capabilities
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <!-- Navy Block -->
-                <div class="bg-[#0b1329] border border-slate-800/60 rounded-sm overflow-hidden group hover:border-amber-500/30 transition duration-300">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://unsplash.com" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" alt="Naval">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0b1329] to-transparent"></div>
-                    </div>
-                    <div class="p-6 space-y-4">
-                        <h3 class="font-cinzel text-lg font-bold text-white tracking-wider flex items-center"><i class="ri-anchor-line mr-2 text-amber-500"></i> Maritime Force</h3>
-                        <ul class="text-xs text-slate-400 space-y-2 font-light">
-                            <li>• Submarine Propulsion Assembly Loop Parts</li>
-                            <li>• High-Output Industrial Marine Generators</li>
-                            <li>• Tactical Speedboat Patrol Propulsion Units</li>
-                            <li>• Heavy Pneumatic Air Starter Motors</li>
-                            <li>• Certified Hull and Vessel Spare Elements</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Army Block -->
-                <div class="bg-[#0b1329] border border-slate-800/60 rounded-sm overflow-hidden group hover:border-amber-500/30 transition duration-300">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://unsplash.com" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" alt="Army">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0b1329] to-transparent"></div>
-                    </div>
-                    <div class="p-6 space-y-4">
-                        <h3 class="font-cinzel text-lg font-bold text-white tracking-wider flex items-center"><i class="ri-shield-cross-line mr-2 text-amber-500"></i> Land Operations</h3>
-                        <ul class="text-xs text-slate-400 space-y-2 font-light">
-                            <li>• Motor Transport (MT) Tactical Spares</li>
-                            <li>• Heavy Armored Vehicle Components</li>
-                            <li>• Military-Specification Mission Ammunition</li>
-                            <li>• Integrated Command Depot CCTV Systems</li>
-                            <li>• Base Infrastructure Maintenance Plants</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Air Force Block -->
-                <div class="bg-[#0b1329] border border-slate-800/60 rounded-sm overflow-hidden group hover:border-amber-500/30 transition duration-300">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://unsplash.com" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" alt="Aviation">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0b1329] to-transparent"></div>
-                    </div>
-                    <div class="p-6 space-y-4">
-                        <h3 class="font-cinzel text-lg font-bold text-white tracking-wider flex items-center"><i class="ri-plane-line mr-2 text-amber-500"></i> Aerospace Wings</h3>
-                        <ul class="text-xs text-slate-400 space-y-2 font-light">
-                            <li>• Aerospace Structural Platform Components</li>
-                            <li>• Technical Airframe Consumable Batches</li>
-                            <li>• High-State `MIL-SPEC` Tactical Special Fluids</li>
-                            <li>• Secure Multi-Node Base PABX Networks</li>
-                            <li>• Complete Cryptographic Surveillance Units</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Corporate Governance Section -->
-    <section id="command" class="py-24 px-6 md:px-16 max-w-5xl mx-auto">
-        <h2 class="font-cinzel text-3xl font-bold text-center tracking-widest mb-16 uppercase text-white">
-            Corporate Governance
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-[#0b1329] border border-slate-800 p-8 rounded text-center shadow-lg">
-                <div class="text-sm font-bold text-white tracking-wider">Mr. Atower Rahman</div>
-                <div class="text-[10px] uppercase font-bold text-amber-500 tracking-widest mt-1">Honorable Chairman</div>
-            </div>
-            <div class="bg-[#0b1329] border border-slate-800 p-8 rounded text-center shadow-lg">
-                <div class="text-sm font-bold text-white tracking-wider">Sultana Rahman</div>
-                <div class="text-[10px] uppercase font-bold text-amber-500 tracking-widest mt-1">Proprietor</div>
-            </div>
-            <div class="bg-[#0b1329] border border-slate-800 p-8 rounded text-center shadow-lg">
-                <div class="text-sm font-bold text-white tracking-wider">Mr. Humayun Rahman</div>
-                <div class="text-[10px] uppercase font-bold text-amber-500 tracking-widest mt-1">Managing Director</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Secure Sourcing Action Console -->
-    <section id="procurement" class="bg-[#02050a] py-24 px-6 md:px-16 border-t border-slate-900">
-        <div class="max-w-4xl mx-auto bg-[#0b1329] border border-slate-800/80 p-8 md:p-12 rounded-sm text-center space-y-6 shadow-2xl relative">
-            <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-amber-500"></div>
-            <h3 class="font-cinzel text-2xl font-bold tracking-widest text-white uppercase">Procurement Command Desk</h3>
-            <p class="text-sm text-slate-400 font-light max-w-xl mx-auto">
-                Connect instantly with our managing engineering desk to initiate official defense tender submissions, quality tracking, or OEM licensing allocation profiles.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 text-left max-w-lg mx-auto">
-                <div class="bg-[#030712] p-4 border border-slate-800/50 rounded flex items-center space-x-3">
-                    <i class="ri-phone-fill text-amber-500 text-xl"></i>
-                    <div>
-                        <div class="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Hotline Interface</div>
-                        <div class="text-sm font-bold text-white">+8801676454419</div>
-                    </div>
-                </div>
-                <div class="bg-[#030712] p-4 border border-slate-800/50 rounded flex items-center space-x-3">
-                    <i class="ri-mail-fill text-amber-500 text-xl"></i>
-                    <div>
-                        <div class="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Secure Sourcing Inbox</div>
-                        <div class="text-sm font-bold text-white">asenterprise220@gmail.com</div>
-                    </div>
-                </div>
-            </div>
-            <div class="pt-6">
-                <a href="mailto:asenterprise220@gmail.com" class="inline-block border border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-slate-950 font-bold text-xs uppercase tracking-widest px-8 py-4 transition rounded-sm shadow-lg">
-                    Initialize Secure Sourcing Exchange
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer System Matrix -->
-    <footer class="bg-[#010307] text-slate-500 text-xs py-16 px-6 md:px-16 border-t border-slate-900/60">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-            <div class="space-y-4">
-                <h4 class="font-cinzel text-sm text-amber-500 font-bold uppercase tracking-wider">A S Enterprise</h4>
-                <p class="font-light leading-relaxed text-slate-400">Registered logistics interface serving the specialized defense infrastructure network of Bangladesh since 2012.</p>
-            </div>
-            <div class="space-y-4">
-                <h4 class="font-cinzel text-sm text-white font-bold uppercase tracking-wider">Mandates & Rules</h4>
-                <ul class="space-y-2 text-slate-400 font-light">
-                    <li>• Directorate General Defence Purchase (DGDP) [^1^]</li>
-                    <li>• Naval Stores Sub Depot (NSSD) Dhaka [^2^]</li>
-                    <li>• Naval Headquarters (Technical Stores Branch)</li>
-                </ul>
-            </div>
-            <div class="space-y-4">
-                <h4 class="font-cinzel text-sm text-white font-bold uppercase tracking-wider">Verified Links</h4>
-                <p class="font-light text-slate-400"><strong>Secure Desk:</strong> asenterprise220@gmail.com</p>
-                <p class="font-light text-slate-400"><strong>Direct Mobile Interface:</strong> +8801676454419</p>
-                <p class="font-light text-slate-400"><strong>Base Grid:</strong> Dhaka, Bangladesh</p>
-            </div>
-        </div>
-        <div class="max-w-6xl mx-auto pt-8 border-t border-slate-900 text-center tracking-widest font-light text-[10px] uppercase text-slate-600">
-            &copy; 2026 A S Enterprise. All Rights Reserved. | Defense Infrastructure Framework Logistics Support.
-        </div>
-    </footer>
-
-    <!-- Instant One-Touch WhatsApp Connection Beacon -->
-    <a href="https://wa.me" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-emerald-500/10 border border-emerald-500 backdrop-blur-md rounded-full flex items-center justify-center text-emerald-500 text-2xl hover:bg-emerald-500 hover:text-slate-950 transition duration-300 shadow-2xl z-50 shadow-emerald-500/20">
-        <i class="ri-whatsapp-line"></i>
-    </a>
-
 </body>
 </html>
