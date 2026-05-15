@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A S Enterprise | Defense Supplier & Logistics Contractor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        nav {
+            background-color: #0b1d33;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .logo {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .logo span {
+            color: #cca43b;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 25px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #cca43b;
+        }
+        .hero {
+            background: linear-gradient(rgba(11, 29, 51, 0.88), rgba(11, 29, 51, 0.88)), 
+                        url('https://unsplash.com') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            color: #ffffff;
+            font-size: 52px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .hero p {
+            color: #e0e0e0;
+            font-size: 20px;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+        .badge {
+            background-color: #cca43b;
+            color: #0b1d33;
+            padding: 12px 24px;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        section {
+            padding: 80px 10%;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: #0b1d33;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #cca43b;
+            margin: 10px auto 0;
+        }
+        .leadership-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid #0b1d33;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-top-color: #cca43b;
+        }
+        .card h3 {
+            color: #0b1d33;
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        .card p {
+            color: #cca43b;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        .portfolio-split {
+            display: flex;
+            align-items: stretch;
+            gap: 50px;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .portfolio-text {
+            flex: 1.2;
+            padding: 50px;
+        }
+        .portfolio-image {
+            flex: 0.8;
+            background: url('https://unsplash.com') no-repeat center center/cover;
+            min-height: 550px;
+        }
+        .portfolio-list-group {
+            margin-bottom: 25px;
+        }
+        .portfolio-list-group h3 {
+            color: #0b1d33;
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+        .portfolio-list-group p {
+            color: #666;
+            font-size: 15px;
+        }
+        .history {
+            background-color: #0b1d33;
+            color: #ffffff;
+            text-align: center;
+        }
+        .history .section-title {
+            color: #ffffff;
+        }
+        .history p {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 18px;
+            color: #d1d5db;
+        }
+        footer {
+            background-color: #06101e;
+            color: #ffffff;
+            padding: 60px 10% 30px;
+        }
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-info h3 {
+            color: #cca43b;
+            margin-bottom: 15px;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        .footer-info p {
+            color: #9ca3af;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #1f2937;
+            padding-top: 20px;
+            font-size: 14px;
+            color: #6b7280;
+        }
+        @media (max-width: 900px) {
+            .portfolio-split { flex-direction: column; }
+            .portfolio-image { min-height: 300px; width: 100%; }
+            .hero h1 { font-size: 36px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">A S <span>ENTERPRISE</span></div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#portfolio">Supply Portfolio</a></li>
+            <li><a href="#track-record">Track Record</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="home" class="hero">
+        <h1>A S Enterprise</h1>
+        <p>Complete Supply Solutions for the Navy, Army, and Air Force. Specializing in strategic marine equipment, aviation support, tactical infrastructure, and comprehensive system automation [1].</p>
+        <div class="badge">Enlisted Contractor: DGDP & NSSD Dhaka</div>
+    </div>
+
+    <section id="leadership">
+        <h2 class="section-title">Corporate Governance</h2>
+        <div class="leadership-container">
+            <div class="card">
+                <h3>Mr. Atower Rahman</h3>
+                <p>Honorable Chairman</p>
+            </div>
+            <div class="card">
+                <h3>Sultana Rahman</h3>
+                <p>Proprietor</p>
+            </div>
+            <div class="card">
+                <h3>Mr. Humayun Rahman</h3>
+                <p>Managing Director</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" style="background-color: #ebedf2;">
+        <h2 class="section-title">Core Defense Supply Portfolio</h2>
+        <div class="portfolio-split">
+            <div class="portfolio-text">
+                <div class="portfolio-list-group">
+                    <h3>⚓ Marine Propulsion & Fleet Spares</h3>
+                    <p>Submarine engines, main vessel propulsion units, speedboat engines, heavy-duty air starter motors, diesel generators, and comprehensive ship structural components [1].</p>
+                </div>
+                <div class="portfolio-list-group">
+                    <h3>✈️ Aviation & Airframe Systems</h3>
+                    <p>Aviation-grade components, Motor Transport (MT) components, time-sensitive aviation platform consumables, and high-spec structural fluids [1].</p>
+                </div>
+                <div class="portfolio-list-group">
+                    <h3>🪖 Tactical Assets & Ammunition</h3>
+                    <p>Military-specification ammunition lines, protective equipment, and essential logistics assets required to operate across all defense branches [1].</p>
+                </div>
+                <div class="portfolio-list-group">
+                    <h3>🔌 Security Electronics & Networks</h3>
+                    <p>High-definition military CCTV surveillance layouts, secure command-level tactical PABX networks, and integrated communication infrastructure [1].</p>
+                </div>
+            </div>
+            <div class="portfolio-image"></div>
+        </div>
+    </section>
+
+    <section id="track-record" class="history">
+        <h2 class="section-title">Our 14-Year Track Record</h2>
+        <p>Established in 2012, A S Enterprise maintains an unblemished corporate reputation and deep goodwill within the Bangladesh military procurement framework. We specialize in complex regulatory clearance, end-to-end global logistical coordination, and technical evaluation compliance across the armed forces [1].</p>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>A S Enterprise</h3>
+                <p>Government Defense Supplier Framework.</p>
+                <p>Enlisted Contractor since 2012.</p>
+            </div>
+            <div class="footer-info">
+                <h3>Institutional Enlistments</h3>
+                <p>• Directorate General Defence Purchase (DGDP)</p>
+                <p>• Naval Stores Sub Depot (NSSD) Dhaka</p>
+                <p>• Naval Headquarters (Technical Stores)</p>
+            </div>
+            <div class="footer-info">
+                <h3>Direct Sourcing Link</h3>
+                <p><strong>Business Email:</strong> asenterprise220@gmail.com</p>
+                <p><strong>Line / WhatsApp:</strong> +8801676454419</p>
+                <p><strong>Operational Base:</strong> Dhaka, Bangladesh</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 A S Enterprise. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
